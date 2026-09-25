@@ -1,0 +1,574 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+    --primary: #e50914;
+    --dark: #080808;
+    --dark-secondary: #121212;
+    --border: #2a2a2a;
+    --muted: #8c8c8c;
+}
+
+
+/* =========================================================
+   BASE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    transition: all 0.2s ease;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.navbar {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.9),
+        transparent
+    );
+}
+
+.navbar-brand {
+    letter-spacing: -0.5px;
+}
+
+.nav-link {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+    min-height: 720px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.72) 40%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0.8) 100%
+        ),
+        linear-gradient(
+            0deg,
+            #080808 0%,
+            transparent 40%
+        ),
+        url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=2000&q=85");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-section .lead {
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   MOVIE CARDS
+========================================================= */
+
+.movie-card {
+    cursor: pointer;
+}
+
+.movie-poster {
+    position: relative;
+    height: 280px;
+
+    border-radius: 8px;
+
+    background-size: cover;
+    background-position: center;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.movie-card:hover .movie-poster {
+    transform: translateY(-5px);
+    filter: brightness(1.15);
+}
+
+.poster-one {
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #991b1b
+        );
+}
+
+.poster-two {
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #7c2d12
+        );
+}
+
+.poster-three {
+    background:
+        linear-gradient(
+            135deg,
+            #18181b,
+            #166534
+        );
+}
+
+.poster-four {
+    background:
+        linear-gradient(
+            135deg,
+            #312e81,
+            #0f172a
+        );
+}
+
+.poster-five {
+    background:
+        linear-gradient(
+            135deg,
+            #450a0a,
+            #713f12
+        );
+}
+
+.poster-six {
+    background:
+        linear-gradient(
+            135deg,
+            #164e63,
+            #365314
+        );
+}
+
+.play-button {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 52px;
+    height: 52px;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #111111;
+
+    font-size: 22px;
+
+    opacity: 0;
+}
+
+.movie-card:hover .play-button {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   FEATURED CONTENT
+========================================================= */
+
+.featured-image {
+    position: relative;
+    min-height: 430px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.05)
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #7f1d1d
+        );
+}
+
+.featured-content {
+    padding: 35px;
+}
+
+
+/* =========================================================
+   SHOW CARDS
+========================================================= */
+
+.show-card {
+    background: #151515;
+    border: 1px solid #242424;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.show-card:hover {
+    transform: translateY(-4px);
+    border-color: #444444;
+}
+
+.show-image {
+    position: relative;
+    height: 280px;
+}
+
+.show-one {
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #581c87
+        );
+}
+
+.show-two {
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #9f1239
+        );
+}
+
+.show-three {
+    background:
+        linear-gradient(
+            135deg,
+            #022c22,
+            #713f12
+        );
+}
+
+.show-number {
+    position: absolute;
+
+    right: 18px;
+    bottom: 10px;
+
+    color: rgba(255, 255, 255, 0.2);
+
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   GENRE CARDS
+========================================================= */
+
+.genre-card {
+    min-height: 120px;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 18px;
+
+    border-radius: 8px;
+
+    color: #ffffff;
+    font-weight: 700;
+
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid transparent;
+}
+
+.genre-card:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+.genre-action {
+    background:
+        linear-gradient(135deg, #7f1d1d, #1c1917);
+}
+
+.genre-drama {
+    background:
+        linear-gradient(135deg, #172554, #1e293b);
+}
+
+.genre-comedy {
+    background:
+        linear-gradient(135deg, #713f12, #422006);
+}
+
+.genre-thriller {
+    background:
+        linear-gradient(135deg, #3f3f46, #18181b);
+}
+
+.genre-scifi {
+    background:
+        linear-gradient(135deg, #312e81, #164e63);
+}
+
+.genre-documentary {
+    background:
+        linear-gradient(135deg, #14532d, #1c1917);
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing-heading {
+    max-width: 600px;
+}
+
+.pricing-card {
+    position: relative;
+
+    background: #121212;
+
+    border: 1px solid #292929;
+
+    border-radius: 12px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-4px);
+    border-color: #555555;
+}
+
+.premium-plan {
+    border-color: #e50914;
+}
+
+.popular-badge {
+    position: absolute;
+
+    top: 0;
+    right: 20px;
+
+    padding: 6px 12px;
+
+    background: #e50914;
+
+    border-radius: 0 0 6px 6px;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+}
+
+.accordion-body {
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+#newsletterForm .form-control {
+    border: 0;
+}
+
+#newsletterForm .form-control:focus {
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer-link {
+    color: #777777;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+.social-link {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #333333;
+    border-radius: 50%;
+
+    color: #aaaaaa;
+    text-decoration: none;
+}
+
+.social-link:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .hero-section {
+        min-height: 650px;
+
+        background-position: center;
+    }
+
+    .movie-poster {
+        height: 320px;
+    }
+
+}
+
+
+@media (max-width: 767.98px) {
+
+    .hero-section {
+        min-height: 650px;
+
+        padding-top: 100px;
+
+        background:
+            linear-gradient(
+                0deg,
+                #080808 5%,
+                rgba(0, 0, 0, 0.5) 60%,
+                rgba(0, 0, 0, 0.8) 100%
+            ),
+            linear-gradient(
+                135deg,
+                #111827,
+                #7f1d1d
+            );
+    }
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+
+    .movie-poster {
+        height: 260px;
+    }
+
+    .show-image {
+        height: 240px;
+    }
+
+    .featured-image {
+        min-height: 350px;
+    }
+
+    .featured-content {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .hero-section {
+        min-height: 620px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1rem;
+    }
+
+    .movie-poster {
+        height: 230px;
+    }
+
+    .show-image {
+        height: 210px;
+    }
+
+    .genre-card {
+        min-height: 100px;
+    }
+
+    .featured-image {
+        min-height: 300px;
+    }
+
+}
